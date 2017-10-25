@@ -1,0 +1,16 @@
+Students resource consists of:
+	Full Name
+	Email Address
+	Phone Number
+	Gender
+	Department
+
+GET /students			Listing students's resource
+
+POST /student 			Create new student resource
+
+GET /student/:id		Show student resource
+
+PUT /student/:id		Edit existing student resource
+
+DELETE /student/:id 	Delete student resource

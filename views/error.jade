@@ -1,0 +1,8 @@
+doctype html
+html(lang="en")
+	head
+		title #{error.status} - #{error.message}
+	body
+		h1 #{error.status} - #{error.message}
+		h3 To go back to homepage, click 
+			a(href="/") here

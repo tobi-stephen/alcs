@@ -1,0 +1,28 @@
+extends layouts
+
+block content
+	h1 Students Resources
+	p Welcome to the site
+
+	#container
+	table
+		tr
+			td Name
+			td Department
+			td Gender
+			td Email
+			td Action
+		for resource in list
+			tr
+				td
+					p=resource.name
+				td
+					p=resource.department
+				td
+					p=resource.gender
+				td
+					p=resource.email
+				td
+					a(href="/student/"+resource.id) Edit
+					form(action="/student/"+resource.id+"/delete", method="POST")
+						button(type="submit") Delete
