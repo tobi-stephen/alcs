@@ -34,13 +34,10 @@ exports.deleteStudentReso = function(req, res, next){
 	var id = req.params.id;
 	console.log(id);
 	Resource.findById(id, function(err, resource){
-		if (err){
-			console.log(err);
-			res.end();
+		if (err || !resource){
+			next();
 		}
-		console.log(resource);
-		res.end();
-		/*else{
+		else{
 		resource.remove(function(err,resource){
 			if(err) {
 				console.error(err);
@@ -49,7 +46,7 @@ exports.deleteStudentReso = function(req, res, next){
 				res.json(resources)
 			}
 		})
-		}*/
+		}
 	})
 }
 
