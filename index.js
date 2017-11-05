@@ -5,8 +5,10 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 var app = express();
 var students = require('./routes/students');
-//var db = mongoose.connect('mongodb://localhost:27017/love');
-var db = mongoose.connect('mongodb://resources:police@ds149495.mlab.com:49495/alcs');
+var db = mongoose.connect('mongodb://localhost:27017/love');
+/*var db = mongoose.connect('mongodb://project:project@ds149495.mlab.com:49495/alcs', {
+	useMongoClient: true
+});*/
 app.set('port', process.env.PORT || 3000);
 
 // view engine setup
