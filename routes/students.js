@@ -15,9 +15,14 @@ router.post('/create', controller.postCreateStudent);
 
 router.get('/student/:id', controller.getStudentResource);
 
-router.put('/student/:id', controller.editStudentResource);
+router.get('/student/:id/edit', controller.getEditStudent);
 
-router.post('/student/:id/delete', controller.deleteStudentReso);
-router.delete('/student/:id', controller.deleteStudentResource);
+router.post('/student/:id/edit', controller.postEditStudent);
+
+router.post('/student/:id/delete', controller.deleteStudent);
+
+//to be used with postman
+router.put('/student/:id', controller.postEditStudent);
+router.delete('/student/:id', controller.deleteStudent);
 
 module.exports = router;

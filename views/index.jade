@@ -4,6 +4,7 @@ block content
 	h1 Students Resources
 	p Welcome to the site
 
+
 	#container
 	table
 		tr
@@ -12,17 +13,21 @@ block content
 			td Gender
 			td Email
 			td Action
-		for resource in list
-			tr
-				td
-					p=resource.name
-				td
-					p=resource.department
-				td
-					p=resource.gender
-				td
-					p=resource.email
-				td
-					a(href="/student/"+resource.id) Edit
-					form(action="/student/"+resource.id+"/delete", method="POST")
-						button(type="submit") Delete
+			if (list.length != 0)
+				for resource in list
+					tr
+						td
+							p=resource.name
+						td
+							p=resource.department
+						td
+							p=resource.gender
+						td
+							p=resource.email
+						td
+							a(href="/student/"+resource.id+"/edit") Edit
+							form(action="/student/"+resource.id+"/delete", method="POST")
+								button(type="submit") Delete
+			else
+				tr
+					p NO RESOURCE AVAILABLE

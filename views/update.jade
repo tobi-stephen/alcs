@@ -1,0 +1,30 @@
+extends layouts
+
+block content
+	h3	Update Details
+	br
+	br
+	form(action="/student/#{resource['id']}/edit", method="POST")
+		div
+			span Full Name
+			input(type="text", name="name", value="#{resource['name']}")			
+			br
+			br
+			span Department
+			input(type="text", name="department", value="#{resource['department']}")
+			br
+			br
+			span Email
+			input(type="text", name="email", value="#{resource['email']}")
+			br
+			br
+			span Male
+			input(type="radio", value="Male", name="gender")
+			br
+			br
+			span Female
+			input(type="radio", value="Female", name="gender")
+			br
+			br
+		div
+			button(type="submit") Submit
