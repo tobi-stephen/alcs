@@ -6,14 +6,14 @@ block content
 
 
 	#container
-	table
-		tr
-			td Name
-			td Department
-			td Gender
-			td Email
-			td Action
-			if (list.length != 0)
+	if (list.length != 0)
+		table
+			tr
+				td Name
+				td Department
+				td Gender
+				td Email
+				td Action
 				for resource in list
 					tr
 						td
@@ -28,6 +28,5 @@ block content
 							a(href="/student/"+resource.id+"/edit") Edit
 							form(action="/student/"+resource.id+"/delete", method="POST")
 								button(type="submit") Delete
-			else
-				tr
-					p NO RESOURCE AVAILABLE
+	else
+		p NO RESOURCE AVAILABLE
