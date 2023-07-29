@@ -15,7 +15,7 @@
     "jade": "^1.11.0",
     "method-override": "^2.3.10",
     "mongodb": "^2.2.33",
-    "mongoose": "^4.12.4",
+    "mongoose": "^5.13.20",
     "morgan": "^1.9.1",
     "pug": "^2.0.0-rc.4",
     "serve-favicon": "^2.5.0"
